@@ -13,16 +13,20 @@ public class Hamburger extends Product {
         this.burgerSetPrice = burgerSetPrice;
     }
 
-    public boolean isBurgerSet() {
-        return isBurgerSet;
+    public Hamburger(Hamburger hamburger){
+        super(hamburger.getName(), hamburger.getPrice(), hamburger.getKcal());
+        this.isBurgerSet = hamburger.isBurgerSet();
+        this.burgerSetPrice = hamburger.getBurgerSetPrice();
+    }
+
+    public boolean isBurgerSet() { return isBurgerSet; }
+
+    public void setISBurgerSet(boolean burgerSet) {
+        this.isBurgerSet = burgerSet;
     }
 
     public int getBurgerSetPrice() {
         return burgerSetPrice;
-    }
-
-    public void setBurgerSet(boolean burgerSet) {
-        isBurgerSet = burgerSet;
     }
 
     public void setBurgerSetPrice(int burgerSetPrice) {
